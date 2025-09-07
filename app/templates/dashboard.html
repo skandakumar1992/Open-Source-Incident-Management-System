@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard - Incident Management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-5">
+    <h2>Incident Dashboard</h2>
+    <a href="/create" class="btn btn-primary mb-3">Create New Incident</a>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Status</th>
+                <th>Reporter</th>
+                <th>Assignee</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for incident in incidents %}
+            <tr>
+                <td>{{ incident.id }}</td>
+                <td>{{ incident.title }}</td>
+                <td>{{ incident.status }}</td>
+                <td>{{ incident.reporter_id }}</td>
+                <td>{{ incident.assignee_id or "Unassigned" }}</td>
+                <td>
+                    <a href="/edit/{{ incident.id }}" class="btn btn-sm btn-warning">Edit</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
+
