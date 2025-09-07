@@ -17,22 +17,14 @@ Step 1.
 ⦁	docker --version
 ⦁	sudo usermod -aG docker $USER
 
-step 2.Setup Flask App
-       run.py
-       app/__init__.py
+step 2.Setup Flask App-run.py and app/__init__.py
 
-step 3. Database Models
-        app/models.py
+step 3. Database Models-app/models.py
+step 4. Routes & REST APIs-app/routes.py
 
-step 4. Routes & REST APIs
-        app/routes.py
+step 5. Email Utility-app/email_utils.py
 
-step 5. Email Utility
-        app/email_utils.py
-
-step 6. Docker Setup
-        Dockerfile
-        requirements.txt
+step 6. Docker Setup-Dockerfile and requirements.txt
 
 Build and run Docker image:
 
