@@ -20,6 +20,7 @@ Step 1.
 step 2.Setup Flask App-run.py and app/__init__.py
 
 step 3. Database Models-app/models.py
+
 step 4. Routes & REST APIs-app/routes.py
 
 step 5. Email Utility-app/email_utils.py
